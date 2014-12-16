@@ -1,0 +1,178 @@
+.container-fluid
+  h2 Añadir nueva propiedad
+  p Completa el formulario lo más completo
+    | posible para mejorar el rank de tu propiedad
+  form(id="", method="", action="" class="")
+    .row
+      .col-md-12
+        .form-step
+          header.form-step-header
+            span.form-step-index 1
+          .form-step-body
+            .row
+              .col-md-4
+                .form-group.clearfix
+                    label.col-sm-4.control-label Tipo de propiedad
+                    .col-sm-8
+                      select(name="" class="form-control" id="type-property")
+                        option(value="") Seleccionar
+              .col-md-4
+                .form-group.clearfix
+                    label.col-sm-4.control-label Operación
+                    .col-sm-8
+                      select(name="" class="form-control")
+                        option(value="") Seleccionar
+              .col-md-4
+                .form-group.clearfix
+                    label.col-sm-4.control-label Operación
+                    .col-sm-8
+                      select(name="" class="form-control")
+                        option(value="") Seleccionar
+            .row
+              .col-md-4
+                .form-group.clearfix.mbn
+                    label.col-sm-4.control-label Uso del inmueble
+                    .col-sm-8
+                      select(name="" class="form-control")
+                        option(value="") Seleccionar
+              .col-md-4
+                .form-group.clearfix.mbn
+                    .col-sm-6
+                      label.checkbox-inline
+                        input(type="checkbox", placeholder="placeholder")
+                        | Residencial
+                    .col-sm-6
+                      label.checkbox-inline
+                        input(type="checkbox", placeholder="placeholder")
+                        | Amueblado
+
+              .col-md-4
+                .form-group.clearfix.mbn
+                    label.col-sm-4.control-label Precio
+                    .col-sm-8
+                      input(type="text", placeholder="Escriba el precio" class="form-control")
+    .row
+      .col-md-12
+        .form-step
+          header.form-step-header
+            span.form-step-index 2
+          .form-step-body.padder
+            .row
+              .col-md-6
+                .form-group.mbn.clearfix
+                  .row
+                    .col-sm-6
+                      fieldset(disabled)
+                        .form-group
+                          label País
+                          select(name="" class="form-control")
+                            option Seleccionar
+                    .col-sm-6
+                      fieldset(disabled)
+                        .form-group
+                          label Estado
+                          select(name="" class="form-control")
+                            option(disabled selected) Seleccionar
+                  .row
+                    .col-sm-6
+                      .form-group
+                        label Municipio
+                        select(name="" class="form-control" id="town")
+                          option Seleccionar
+                    .col-sm-6
+                      .form-group
+                        label Código Postal
+                        select(name="" class="form-control" id="zipcode")
+                          option(disabled selected) Seleccionar
+                  .row
+                    .col-sm-12
+                      .form-group
+                        label Colonia / Asentamiento
+                        select(name="" class="form-control" id="settlement")
+                          option Seleccionar
+                  .row
+                    .col-sm-12
+                      .form-group
+                        label Desarrollo
+                        select(name="" class="form-control")
+                          option Seleccionar
+                  .row
+                    .col-sm-12
+                      .form-group
+                        label Calle
+                        input(type="text", name="", id="", value="", required="required", pattern="", title="").form-control
+                  .row
+                    .col-sm-6
+                      .form-group.mbn
+                        label Número Exterior
+                        input(type="text", name="", id="", value="", required="required", pattern="", title="").form-control
+                    .col-sm-6
+                      .form-group.mbn
+                        label Número Interior
+                        input(type="text", name="", id="", value="", required="required", pattern="", title="").form-control
+
+              .col-md-6
+                h3 Google Map
+                #map-container.map-container
+                .row
+                  .col-md-6
+                    .form-group
+                      input(type="text", placeholder="latitud").form-control
+                  .col-md-6
+                    .form-group
+                      input(type="text", placeholder="longitud").form-control
+
+    .row
+      .col-md-12
+        .form-step
+          header.form-step-header
+            span.form-step-index 3
+          .form-step-body.padder
+            .row
+              .col-md-6
+                #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                    .panel.panel-default
+                        #headingOne.panel-heading(role='tab')
+                          h4.panel-title
+                            a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                              | Collapsible Group Item #1
+
+                        #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                            | terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
+                            | dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                            | sunt aliqua put a bird on it squid single-origin |coffee nulla assumenda shoreditch et.
+                            | Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                            | proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                            | raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+
+                      .panel.panel-default
+                        #headingTwo.panel-heading(role='tab')
+                          h4.panel-title
+                            a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                              | Collapsible Group Item #2
+
+                        #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+
+                      .panel.panel-default
+                        #headingThree.panel-heading(role='tab')
+                          h4.panel-title
+                            a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                              | Collapsible Group Item #3
+
+                        #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                          .panel-body
+                            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&apos;t heard of them accusamus labore sustainable VHS.
+
+
+
+
+
+
+script#option-select-template(type='text/x-handlebars-template').
+  {{#each option}}
+    <option value="{{ id }}"> {{ name }}</option>
+  {{/each}}
