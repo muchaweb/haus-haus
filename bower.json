@@ -6,5 +6,10 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "backbone": "~1.1.2",
+    "handlebars": "~2.0.0",
+    "gmap3": "~6.0.0",
+    "font-awesome": "~4.2.0"
+  }
 }

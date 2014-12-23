@@ -1,7 +1,7 @@
 "use strict"
 
 
-BASE_API_URL = 'http://192.168.1.6:8000/api/'
+BASE_API_URL = 'http://192.168.1.80:8000/api/'
 window.vent         = _.extend {}, Backbone.Events
 
 window.template = (idTemplate)->
@@ -213,6 +213,33 @@ App.View.Settlement = Backbone.View.extend
       alert 'No existe Latitud - Longitud'
       return
 
+App.Model.Feature = Backbone.Model.extend()
+
+App.Collection.Feature = Backbone.Collection.extend
+  model : App.Model.Feature
+  url : BASE_API_URL + 'type/1/featureform/'
+
+App.View.Feature = Backbone.View.extend
+  el : '#popo'
+  template : template('categorys-template')
+  features : null
+  initialize : ->
+    console.log 'popo is back'
+    @features = new App.Collection.Feature()
+    @render()
+    @features.fetch reset:true
+    @listenTo @features, 'reset', @render
+    return
+
+  render : ->
+    if @features.models.length > 0
+      output = @template feature: @features.toJSON()
+      console.log @features.toJSON()
+      @$el.append output
+    return @
+
+
+new App.View.Feature
 new App.View.ZipCode
 new App.View.Settlement
 new App.View.Town

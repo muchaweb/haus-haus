@@ -46,6 +46,7 @@
         </aside>
         <main class="page-content">
           <div class="container-fluid">
+            <div id="popo"></div>
             <h2>Añadir nueva propiedad</h2>
             <p>
               Completa el formulario lo más completo
@@ -293,6 +294,26 @@
             {{#each option}}
               <option value="{{ id }}"> {{ name }}</option>
             {{/each}}
+            
+          </script>
+          <script id="categorys-template" type="text/x-handlebars-template">
+            <ul>
+              {{#each feature}}
+                <li>
+                  <span> {{ category }}</span>
+                  {{#each features}}
+            
+                    {{# is control.inputControl === 'select' }}
+                      select#(name="")
+                        {{#each option}}
+                          {{ option }}
+                        {{/each}}
+                    {{/is}}
+                  {{/each}}
+                </li>
+            
+              {{/each}}
+            </ul>
           </script>
         </main>
       </div>
@@ -326,6 +347,7 @@
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/handlebars-helpers/src/helpers.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="scripts/utils/vector.js"></script>
   <!-- endbower-->

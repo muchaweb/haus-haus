@@ -1,4 +1,5 @@
 .container-fluid
+  div#popo
   h2 Añadir nueva propiedad
   p Completa el formulario lo más completo
     | posible para mejorar el rank de tu propiedad
@@ -176,3 +177,22 @@ script#option-select-template(type='text/x-handlebars-template').
   {{#each option}}
     <option value="{{ id }}"> {{ name }}</option>
   {{/each}}
+
+script#categorys-template(type="text/x-handlebars-template").
+  <ul>
+    {{#each feature}}
+      <li>
+        <span> {{ category }}</span>
+        {{#each features}}
+
+          {{# is control.inputControl === 'select' }}
+            select#(name="")
+              {{#each option}}
+                {{ option }}
+              {{/each}}
+          {{/is}}
+        {{/each}}
+      </li>
+
+    {{/each}}
+  </ul>
